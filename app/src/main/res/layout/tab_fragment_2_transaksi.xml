@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPureWhite"
+    android:layout_width="match_parent"
+    android:paddingBottom="20dp"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="100dp">
+
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/loading_circle_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:translationZ="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/namapelanggannota"
+            android:textColor="@color/colorPureBlack"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextNamaPelanggan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="145dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/nomorhp"
+            android:textColor="@color/colorPureBlack"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextNomorHP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <EditText
+            android:id="@+id/editTextNamaPelanggan"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_edit_text_v3"
+            android:elevation="5dp"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:maxLength="12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextNomorHP"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_edit_text_v3"
+            android:elevation="5dp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:maxLength="12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView39"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNamaPelanggan" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayoutSatuan"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_constraint_button"
+            android:elevation="5dp"
+            android:paddingBottom="15dp"
+            android:clipToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutKiloan">
+
+            <android.support.v7.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/recycler_view_satuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSatuan"/>
+            <TextView
+                android:id="@+id/textViewSatuan"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/satuan"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imageViewMinusRowSatuan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_minus"
+                app:layout_constraintEnd_toStartOf="@id/imageViewPlusRowSatuan"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_satuan" />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imageViewPlusRowSatuan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewMinusRowSatuan"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_satuan" />
+            <ImageView
+                android:id="@+id/imageViewSatuan"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_nested_off"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/ketbiayadantanggal"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewPlusRowSatuan" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textView28"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/biaya"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <TextView
+                android:id="@+id/textViewTanggalSatuan"
+                android:visibility="gone"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/tglselesai2"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+            <android.support.constraint.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/constraintLayoutNestedSatuan1"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/custom_edit_text_v3"
+                android:elevation="5dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27">
+
+                <TextView
+                    android:id="@+id/textViewBiayaSatuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_medium"
+                    android:textColor="@color/colorPureBlack"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/constraintLayoutNestedSatuan2"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/custom_edit_text_v3"
+                android:elevation="5dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutNestedSatuan1">
+
+                <TextView
+                    android:id="@+id/textViewTglSelesaiSatuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_medium"
+                    android:textColor="@color/colorPureBlack"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayoutKiloan"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_constraint_button"
+            android:elevation="5dp"
+            android:paddingBottom="15dp"
+            android:clipToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNomorHP">
+
+            <TextView
+                android:id="@+id/textViewKiloan"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/kiloan"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewKiloan"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_nested_off"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewKiloJenis"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/jenislayanan2"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewKiloan" />
+
+            <TextView
+                android:id="@+id/textViewKiloBerat"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="29dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/berat2"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewKiloJenis" />
+
+            <TextView
+                android:id="@+id/textViewKiloJumlah"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="29dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/jumlahpcs"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewKiloBerat" />
+
+            <Spinner
+                android:id="@+id/spinnerJenisLayananKiloan"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/custom_edit_text_v3"
+                android:elevation="5dp"
+                android:textAlignment="center"
+                android:inputType="text"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewKiloJenis"
+                app:layout_constraintTop_toBottomOf="@+id/textViewKiloan" />
+
+            <EditText
+                android:id="@+id/editTextBeratKiloan"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/custom_edit_text_v3"
+                android:elevation="5dp"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewKiloBerat"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerJenisLayananKiloan" />
+
+            <EditText
+                android:id="@+id/editTextJumlahPcsKiloan"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/custom_edit_text_v3"
+                android:elevation="5dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewKiloJumlah"
+                app:layout_constraintTop_toBottomOf="@+id/editTextBeratKiloan" />
+
+            <TextView
+                android:id="@+id/textViewKiloBiayaTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/ketbiayadantanggal"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextJumlahPcsKiloan" />
+
+            <TextView
+                android:id="@+id/textViewKiloBiaya"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/biaya"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewKiloBiayaTanggal" />
+
+            <TextView
+                android:id="@+id/textViewKiloTanggal"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/tglselesai2"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewKiloBiaya" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayoutNestedKiloan1"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/custom_edit_text_v3"
+                android:elevation="5dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewKiloBiaya"
+                app:layout_constraintTop_toBottomOf="@+id/textViewKiloBiayaTanggal">
+
+                <TextView
+                    android:id="@+id/textViewBiayaKiloan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_medium"
+                    android:textColor="@color/colorPureBlack"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayoutNestedKiloan2"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/custom_edit_text_v3"
+                android:elevation="5dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewKiloTanggal"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutNestedKiloan1">
+
+                <TextView
+                    android:id="@+id/textViewTglSelesaiKiloan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_medium"
+                    android:textColor="@color/colorPureBlack"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayoutMeteran"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_constraint_button"
+            android:elevation="5dp"
+            android:paddingBottom="15dp"
+            android:clipToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutSatuan">
+
+            <TextView
+                android:id="@+id/textViewMeteran"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/meteran"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/recycler_view_meteran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMeteran"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imageViewMinusRowMeteran"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_minus"
+                app:layout_constraintEnd_toStartOf="@id/imageViewPlusRowMeteran"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_meteran" />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imageViewPlusRowMeteran"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewMinusRowMeteran"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_meteran" />
+
+
+           <ImageView
+                android:id="@+id/imageViewMeteran"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_nested_off"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textViewBiayaTanggalMeteran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/ketbiayadantanggal"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewPlusRowMeteran" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textViewTulisanBiayaMeteran"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="23dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/biaya"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewBiayaTanggalMeteran" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textViewTulisanTanggalMeteran"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/lato_medium"
+                android:text="@string/tglselesai2"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTulisanBiayaMeteran" />
+
+            <android.support.constraint.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/constraintLayoutBiayaMeteran"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/custom_edit_text_v3"
+                android:elevation="5dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewBiayaTanggalMeteran">
+
+                <TextView
+                    android:id="@+id/textViewBiayaMeteran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_medium"
+                    android:textColor="@color/colorPureBlack"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/constraintLayoutTanggalSelesaiMeteran"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/custom_edit_text_v3"
+                android:elevation="5dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayoutBiayaMeteran">
+
+                <TextView
+                    android:id="@+id/textViewTglSelesaiMeteran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_medium"
+                    android:textColor="@color/colorPureBlack"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textViewTotalBiaya"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/totalbiaya"
+            android:textColor="@color/colorPureBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMeteran" />
+
+        <TextView
+            android:id="@+id/textViewPembayaran"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/pembayaran"
+            android:textColor="@color/colorPureBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalBiaya" />
+
+        <TextView
+            android:id="@+id/textViewKembalian"
+            android:layout_width="145dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/kembalian"
+            android:textColor="@color/colorPureBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPembayaran" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="145dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/status"
+            android:textColor="@color/colorPureBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewKembalian" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayoutTotalBiaya"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_edit_text_v3"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewTotalBiaya"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutMeteran">
+
+            <TextView
+                android:id="@+id/textViewTotalBiayaOtomatis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_medium"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <EditText
+            android:id="@+id/editTextPembayaran"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_edit_text_v3"
+            android:elevation="5dp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewPembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTotalBiaya" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayoutKembalian"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_edit_text_v3"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewKembalian"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPembayaran">
+
+            <TextView
+                android:id="@+id/textViewTglKembalianOtomatis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_medium"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayoutStatus"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_edit_text_v3"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewStatus"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutKembalian">
+
+            <TextView
+                android:id="@+id/textViewStatusOtomatis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_medium"
+                android:textColor="@color/colorPureBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:id="@+id/buttonCekNota"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/custom_button"
+            android:elevation="5dp"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/cetaknota"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPureWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutStatus" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

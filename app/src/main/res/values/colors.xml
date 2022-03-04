@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#40A7DE</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorPureWhite">#FFFFFF</color>
+    <color name="colorOldBlue">#276AB1</color>
+    <color name="colorPureBlack">#000000</color>
+    <color name="colorTransparentWhite">#CCCCCC</color>
+    <color name="colorYoungBlue">#40A7DE</color>
+    <color name="colorPureWhite30">#4DFFFFFF</color>
+    <color name="colorPureWhite50">#80FFFFFF</color>
+    <color name="colorGraySearch">#ECECEC</color>
+    <color name="colorBlackSearch">#727C8E</color>
+    <color name="colorBlueLogin">#40A7DE</color>
+</resources>

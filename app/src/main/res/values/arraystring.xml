@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jenis_kiloan_array">
+        <item>reguler</item>
+        <item>express</item>
+        <item>setrika</item>
+        <item>gorden</item>
+    </string-array>
+
+    <string-array name="jenis_meteran_array">
+        <item>Karpet tipis</item>
+        <item>Karpet medium</item>
+        <item>Karpet tebal</item>
+        <item>Karpet super</item>
+        <item>Karpet sutra</item>
+        <item>Kasur palembang</item>
+        <item>Tikar plastik</item>
+    </string-array>
+
+    <string-array name="jenis_satuan_array">
+        <item>Baju gamis</item>
+        <item>Baju kaos</item>
+        <item>Baju kaos kerah</item>
+        <item>Baju pengantin</item>
+        <item>Baju wisuda</item>
+        <item>Baju dalam</item>
+        <item>Bantal besar</item>
+        <item>Bantal kecil</item>
+        <item>Bantal guling</item>
+        <item>Bantal selimut</item>
+        <item>Bed cover double</item>
+        <item>Bed cover single</item>
+        <item>Blazer</item>
+        <item>Boneka extra besar</item>
+        <item>Boneka besar</item>
+        <item>Boneka sedang</item>
+        <item>Boneka kecil</item>
+        <item>Boneka mini</item>
+        <item>Blouse</item>
+        <item>Box bayi besar</item>
+        <item>Box bayi sedang</item>
+        <item>Box bayi kecil</item>
+        <item>Celana panjang</item>
+        <item>Celana 3/4</item>
+        <item>Celana pendek</item>
+        <item>Celana dalam</item>
+        <item>Dress variasi</item>
+        <item>Dress panjang</item>
+        <item>Dress pendek</item>
+        <item>Dalaman kebaya variasi</item>
+        <item>Dalaman kebaya</item>
+        <item>Dasi</item>
+        <item>Handuk besar</item>
+        <item>Handuk sedang</item>
+        <item>Handuk kecil</item>
+        <item>Jas</item>
+        <item>Jaket</item>
+        <item>Jaket kulit</item>
+        <item>Koper besar</item>
+        <item>Koper sedang</item>
+        <item>Koper kecil</item>
+        <item>Kelambu (m2)</item>
+        <item>Kebaya</item>
+        <item>Kemeja</item>
+        <item>Kemeja batik</item>
+        <item>Matras besar</item>
+        <item>Matras sedang</item>
+        <item>Matras kecil</item>
+        <item>Mukena</item>
+        <item>Piyama</item>
+        <item>Rompi</item>
+        <item>Rok panjang/variasi</item>
+        <item>Rok 3/4</item>
+        <item>Rok pendek</item>
+        <item>Sapu tangan</item>
+        <item>Sarung tutup mobil</item>
+        <item>Sarung bantal kursi</item>
+        <item>Sarung bantal besar</item>
+        <item>Sarung bantal kecil</item>
+        <item>Seprai double</item>
+        <item>Seprai single</item>
+        <item>Selimut tebal</item>
+        <item>Selimut tipis</item>
+        <item>Sepatu kulit/variasi</item>
+        <item>Sepatu</item>
+        <item>Stelan blazer</item>
+        <item>Stelan baju karate</item>
+        <item>Stelan baju olahraga</item>
+        <item>Stelan kebaya</item>
+        <item>Stelan jas</item>
+        <item>Stelan waskat</item>
+        <item>Sweater</item>
+        <item>Tas</item>
+        <item>Tas travel/variasi</item>
+        <item>Topi</item>
+        <item>Waskat</item>
+        <item>Bath towel</item>
+        <item>Bath matt</item>
+        <item>Hand towel</item>
+        <item>Pool towel</item>
+        <item>Pillow case</item>
+        <item>Pillow protector</item>
+        <item>Bolster case</item>
+        <item>Bolster protector</item>
+        <item>Sheet twin</item>
+        <item>Sheet king</item>
+        <item>Sheet king(suite)</item>
+        <item>Dove cover twin</item>
+        <item>Dove cover king</item>
+        <item>Dove cover king(suite)</item>
+        <item>Bathrobe</item>
+        <item>Lobby duster</item>
+        <item>Bed pad</item>
+        <item>Inner duvet</item>
+        <item>Napkin</item>
+        <item>Table cloth</item>
+        <item>Table runner</item>
+        <item>Cover chair</item>
+        <item>Moulton</item>
+        <item>Ribbon</item>
+        <item>Skarting</item>
+    </string-array>
+</resources>

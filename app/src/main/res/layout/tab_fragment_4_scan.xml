@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPureWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearlayout">
+
+        <RadioButton
+            android:id="@+id/radioTerima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20sp"
+            android:checked="true"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/terima"
+            android:textColor="@color/colorPureBlack"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioPelunasan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/pelunasan"
+            android:textColor="@color/colorPureBlack"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioCekRak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/cek_rak"
+            android:textColor="@color/colorPureBlack"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_medium"
+            android:text="Nomor rak: "
+            android:textColor="@color/colorPureBlack"
+            android:textSize="17sp"
+            />
+
+        <EditText
+            android:id="@+id/editTextNomorRak"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:maxLength="10"
+            />
+
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="310dp"
+        android:layout_height="330dp"
+        android:background="@color/colorBlueLogin"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="201dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ProgressBar
+            android:id="@+id/loading_circle_bar_tab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:translationZ="100dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewTab4"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/colorPureWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonActivateCamera"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/custom_button_transparent"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/aktifkankamera"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPureWhite"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonInputManual"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewTab4" />
+
+
+        <Button
+            android:id="@+id/buttonInputManual"
+            android:layout_width="105dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/custom_button_transparent"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/manual"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPureWhite"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonActivateCamera"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewTab4" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

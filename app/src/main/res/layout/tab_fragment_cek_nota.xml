@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPureWhite"
+    android:paddingTop="40dp"
+    android:paddingBottom="120dp"
+    android:clipToPadding="false"
+    >
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/loading_circle_bar_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:translationZ="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_success"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewBerhasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/ceknota"
+            android:textColor="@color/colorYoungBlue"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleImageSuccess" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewKeterangan"-->
+            <!--android:layout_width="310dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:fontFamily="@font/lato_medium"-->
+            <!--android:text="@string/orderberhasil"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/colorPureBlack"-->
+            <!--android:textSize="18sp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/textViewBerhasil" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewTerimaKasih"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:fontFamily="@font/lato_medium"-->
+            <!--android:text="@string/terimakasih"-->
+            <!--android:textColor="@color/colorPureBlack"-->
+            <!--android:textSize="18sp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/textViewKeterangan" />-->
+
+
+        <Button
+            android:id="@+id/buttonPrintKiloan"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/lato_medium"
+            android:text="Print Kiloan"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPureWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPrintCustomer" />
+
+        <Button
+            android:id="@+id/buttonPrintSatuan"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/lato_medium"
+            android:text="Print Satuan"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPureWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPrintKiloan" />
+
+        <Button
+            android:id="@+id/buttonPrintMeteran"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/lato_medium"
+            android:text="Print Meteran"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPureWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPrintSatuan" />
+
+        <Button
+            android:id="@+id/buttonPrintCustomer"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/lato_medium"
+            android:text="Print Nota Customer"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPureWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBerhasil" />
+
+        <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:id="@+id/circleImageWhatsapp"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:src="@drawable/whatsapp_icon"-->
+            <!--app:layout_constraintTop_toTopOf="@id/buttonPrintCustomer"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toEndOf="@id/buttonPrintCustomer"/>-->
+
+        <Button
+            android:id="@+id/buttonKembali"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/kembali"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPureWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPrintMeteran" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

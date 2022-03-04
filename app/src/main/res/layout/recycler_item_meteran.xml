@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/textViewNomor"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/lato_medium"
+            android:text="@string/no1"
+            android:textColor="@color/colorPureBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <AutoCompleteTextView
+            android:id="@+id/editTextJenisMeteran"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_edit_text_v3"
+            android:elevation="5dp"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewNomor"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/editTextPanjangMeteran"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_edit_text_v3"
+            android:elevation="5dp"
+            android:hint="@string/p"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColorHint="@color/colorPureBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@+id/editTextJenisMeteran"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextLebarMeteran"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_edit_text_v3"
+            android:elevation="5dp"
+            android:hint="@string/l"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColorHint="@color/colorPureBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@+id/editTextPanjangMeteran"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <ImageView
+            android:id="@+id/imageViewMinusMeteran"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_minus"
+            app:layout_constraintStart_toEndOf="@+id/editTextLebarMeteran"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/editTextJumlahPcsMeteran"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_edit_text_v3"
+            android:elevation="5dp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@+id/imageViewMinusMeteran"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewPlusMeteran"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintStart_toEndOf="@+id/editTextJumlahPcsMeteran"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

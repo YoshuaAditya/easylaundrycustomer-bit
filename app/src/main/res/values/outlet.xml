@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="outlet_array">
+        <item>Outlet 01 Balikpapan</item>
+        <item>Outlet 01 Samarinda</item>
+        <item>Outlet 01 Bandung</item>
+        <item>Outlet 01 Surabaya</item>
+        <item>Outlet 01 Jakarta</item>
+    </string-array>
+</resources>
